@@ -1,3 +1,7 @@
+## These functions cache the inverse of a matrix using lexical scoping
+## to avoid repeated costly computations. If the inverse has already
+## been calculated, it retrieves the cached result instead.
+
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
     set <- function(y) {
